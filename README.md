@@ -1,1 +1,2 @@
 # Endless-Runner
+This endless runner project will be focused around a stick figure as the main character jumping over obstacles. The changes planned will include a background, a score to show how far you have ran for, and possibly a difficulty increase based on your overall distance in the game. These aspects will make the core loop of the game alongside the style for the design of the game itself. My goals for this project is to make it visually appealing and add some collectibles as score to help the gameplay loop. 
