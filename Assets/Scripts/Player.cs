@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     {
         direction += Vector3.down * gravity * Time.deltaTime;
         animator.SetBool("isRunning", GameManager.Instance.gameSpeed > 0);
+        
 
         if (character.isGrounded)
         {
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour
             {
                 direction = Vector3.up * jumpForce;
             }
+            
         }
         character.Move(direction * Time.deltaTime);
     }
