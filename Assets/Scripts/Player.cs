@@ -6,12 +6,15 @@ public class Player : MonoBehaviour
 {
     private CharacterController character;
     private Vector3 direction;
+    private Animator animator;
     public float gravity = 9.81f * 2f;
     public float jumpForce = 8f;
 
     private void Awake()
     {
         character = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
+        
     }
     private void OnEnable()
     {
@@ -20,6 +23,8 @@ public class Player : MonoBehaviour
     private void Update()
     {
         direction += Vector3.down * gravity * Time.deltaTime;
+        animator.SetBool("isRunning", GameManager.Instance.gameSpeed > 0);
+        
 
         if (character.isGrounded)
         {
@@ -29,6 +34,7 @@ public class Player : MonoBehaviour
             {
                 direction = Vector3.up * jumpForce;
             }
+            
         }
         character.Move(direction * Time.deltaTime);
     }
