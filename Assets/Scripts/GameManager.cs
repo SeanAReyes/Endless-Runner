@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance = null) 
+        if (Instance == null) 
         {
             Instance = this;
         } else 
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     }
     private void OnDestroy()
     {
-        if (Instance = this)
+        if (Instance == this)
         {
             Instance = null;
         }
