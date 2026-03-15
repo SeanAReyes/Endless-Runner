@@ -244,10 +244,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - prefab: {fileID: 0}
-    spawnChance: 0
-  - prefab: {fileID: 0}
-    spawnChance: 0
+  - prefab: {fileID: 1218496037009636564, guid: 947deced139794b82b93ab9279647892, type: 3}
+    spawnChance: 0.2
+  - prefab: {fileID: 4280583116663697734, guid: ecc6d94aebd1545f9ab1d3eaca6684df, type: 3}
+    spawnChance: 0.2
+  - prefab: {fileID: 7455330700610064123, guid: a48908aa70bbc4a75a93409722f5a478, type: 3}
+    spawnChance: 0.15
+  - prefab: {fileID: 750125078027837112, guid: c5b5a42bbf8dd4848a8aab5d8217c3cf, type: 3}
+    spawnChance: 0.15
+  - prefab: {fileID: 693482436053946526, guid: e554b3ffd97a449dd9ad2d141777117a, type: 3}
+    spawnChance: 0.1
+  - prefab: {fileID: 5531969028309228094, guid: 720417fb1d47443b08116bbc6bc09aa3, type: 3}
+    spawnChance: 0.1
+  minSpawnRate: 1
+  maxSpawnRate: 2
 --- !u!4 &570144756
 Transform:
   m_ObjectHideFlags: 0
@@ -257,7 +267,7 @@ Transform:
   m_GameObject: {fileID: 570144754}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: -1.7, z: 0}
+  m_LocalPosition: {x: 5.76, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
