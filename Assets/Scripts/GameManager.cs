@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using FirstGearGames.SmoothCameraShaker;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     private Player player;
     private Spawner spawner;
+    [SerializeField] private ShakeData deathShakeData;
 
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI scoreText;
@@ -68,6 +70,8 @@ public class GameManager : MonoBehaviour
     {
         gameSpeed = 0f;
         enabled = false;
+
+        CameraShakerHandler.Shake(deathShakeData);
 
         player.gameObject.SetActive(false);
         spawner.gameObject.SetActive(false);
