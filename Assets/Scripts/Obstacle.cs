@@ -8,7 +8,7 @@ public class Obstacle : MonoBehaviour
 
     private void Start()
     {
-        LeftEdge = Camera.main.ScreenToWorldPoint(Vector3.zero).x - 3f;
+        LeftEdge = Camera.main.ScreenToWorldPoint(Vector3.zero).x - 2f;
     }
     private void Update()
     {
