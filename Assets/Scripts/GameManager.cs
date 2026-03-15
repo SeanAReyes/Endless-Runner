@@ -16,7 +16,11 @@ public class GameManager : MonoBehaviour
     private Spawner spawner;
 
     public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI bestScoreText;
     public Button retryButton;
+
+    private float score;
 
     private void Awake()
     {
@@ -51,6 +55,7 @@ public class GameManager : MonoBehaviour
             Destroy(obstacle.gameObject);
         }
 
+        score = 0f;
         gameSpeed = initialGameSpeed;
         enabled = true;
 
@@ -72,5 +77,20 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         gameSpeed += gameSpeedIncrease * Time.deltaTime;
+        score += gameSpeed * Time.deltaTime;
+        scoreText.text = Mathf.FloorToInt(score).ToString("D5");
+
+        UpdateBestScore();
+    }
+    private void UpdateBestScore()
+    {
+        float hiScore = PlayerPrefs.GetFloat("hiscore", 0);
+
+        if (score > hiScore)
+        {
+            hiScore = score;
+            PlayerPrefs.SetFloat("hiscore", hiScore);
+        }
+        bestScoreText.text = Mathf.FloorToInt(hiScore).ToString("D5");
     }
 }
