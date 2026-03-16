@@ -153,9 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - prefab: {fileID: 5604153497495037833, guid: 395206b127f9d4b9ea7bffe3fa5da8da, type: 3}
-    spawnChance: 0.2
-  - prefab: {fileID: 4633449455318160921, guid: 06003026e1c7b4a40a231157801b9572, type: 3}
-    spawnChance: 0.05
+    spawnChance: 0.5
   minSpawnRate: 1
   maxSpawnRate: 2
 --- !u!4 &218226101
@@ -167,7 +165,7 @@ Transform:
   m_GameObject: {fileID: 218226099}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.02, y: -1.17, z: 0}
+  m_LocalPosition: {x: 6.02, y: -0.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6205,6 +6203,7 @@ MonoBehaviour:
   gravity: 19.62
   jumpForce: 8
   jumpClip: {fileID: 8300000, guid: 165fce113512447719626c41772feb94, type: 3}
+  shieldOn: {fileID: 0}
 --- !u!95 &1860569996
 Animator:
   serializedVersion: 5

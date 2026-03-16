@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     private Spawner spawner;
     [SerializeField] private ShakeData deathShakeData;
     [SerializeField] private AudioClip deathClip;
+    
 
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI scoreText;
@@ -56,6 +57,12 @@ public class GameManager : MonoBehaviour
         foreach (var obstacle in obstacles)
         {
             Destroy(obstacle.gameObject);
+        }
+        Item[] items = FindObjectsOfType<Item>();
+        
+        foreach (var item in items)
+        {
+            Destroy(item.gameObject);
         }
 
         score = 0f;
@@ -98,5 +105,9 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetFloat("hiscore", hiScore);
         }
         bestScoreText.text = Mathf.FloorToInt(hiScore).ToString("D5");
+    }
+    public void AddScore(int amount)
+    {
+        score += amount;
     }
 }
