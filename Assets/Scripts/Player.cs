@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     private Vector3 direction;
     public float gravity = 9.81f * 2f;
     public float jumpForce = 8f;
+    [SerializeField] private AudioClip jumpClip;
 
     private void Awake()
     {
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour
             if (Input.GetButton("Jump"))
             {
                 direction = Vector3.up * jumpForce;
+                AudioManager.instance.PlaySoundFXClip(jumpClip, transform, .5f);
             }
             
         }

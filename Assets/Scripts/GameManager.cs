@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private Player player;
     private Spawner spawner;
     [SerializeField] private ShakeData deathShakeData;
+    [SerializeField] private AudioClip deathClip;
 
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI scoreText;
@@ -77,6 +78,7 @@ public class GameManager : MonoBehaviour
         spawner.gameObject.SetActive(false);
         gameOverText.gameObject.SetActive(true);
         retryButton.gameObject.SetActive(true);
+        AudioManager.instance.PlaySoundFXClip(deathClip, transform, 1f);
     }
     private void Update()
     {

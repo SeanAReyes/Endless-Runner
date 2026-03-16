@@ -3,7 +3,13 @@ guid: 9fbcfe2f92e1740c485782010d63072e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - deathShakeData: {instanceID: 0}
+  - deathClip: {fileID: 8300000, guid: 6506dc4b8147b45c79998c0862e58704, type: 3}
+  - gameOverText: {instanceID: 0}
+  - scoreText: {instanceID: 0}
+  - bestScoreText: {instanceID: 0}
+  - retryButton: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

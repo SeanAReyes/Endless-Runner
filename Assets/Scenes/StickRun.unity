@@ -457,6 +457,7 @@ MonoBehaviour:
   initialGameSpeed: 5
   gameSpeedIncrease: 0.1
   deathShakeData: {fileID: 11400000, guid: f859884ab34c54727856773ab1dbdfb0, type: 2}
+  deathClip: {fileID: 8300000, guid: 6506dc4b8147b45c79998c0862e58704, type: 3}
   gameOverText: {fileID: 1762054808}
   scoreText: {fileID: 980717184}
   bestScoreText: {fileID: 1367894647}
@@ -5508,6 +5509,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980717182}
   m_CullTransparentMesh: 1
+--- !u!1 &1065453465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1065453467}
+  - component: {fileID: 1065453466}
+  m_Layer: 0
+  m_Name: SoundFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1065453466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065453465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 311fef3ab2f074689a9abcb164c00f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxSource: {fileID: 7560348732091694541, guid: 1c016d8daf83f4beaaaa23575b86a455, type: 3}
+--- !u!4 &1065453467
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065453465}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1367894645
 GameObject:
   m_ObjectHideFlags: 0
@@ -6107,6 +6153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: 19.62
   jumpForce: 8
+  jumpClip: {fileID: 8300000, guid: 165fce113512447719626c41772feb94, type: 3}
 --- !u!95 &1860569996
 Animator:
   serializedVersion: 5
@@ -6383,6 +6430,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 652079962}
+  - {fileID: 1065453467}
   - {fileID: 519420032}
   - {fileID: 1860569993}
   - {fileID: 1497544595}
